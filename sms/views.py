@@ -7,10 +7,13 @@ from twilio.twiml.messaging_response import MessagingResponse
 from .twilio_client.twilio_client import TwilioDJ
 
 
+
 class ReceiveSMSAPIView(APIView):
     def post(self,request):
+        f = open("./logs","a")
         body = request.values.get('Body', None)
-        print(list(body.keys()))
+        f = open("./logs","w")
+        f.writelines("\n".join([f'{str(item)} : {str(body[item])}' for item in list(body.keys())]))
 
         # Start our TwiML response
         resp = MessagingResponse()
