@@ -3,9 +3,14 @@ import json
 from datetime import datetime
 
 class TwilioDJ():
+    # MY_PHONE_NUMBER = "+16466667185"
+    # ACCOUNT_SID = "AC0c72df4b7c94c8ab471c5092643b2929"
+    # AUTH_TOKEN = "a9aeab16f1264c9755765cd09434bad1"
+
     MY_PHONE_NUMBER = "+19099069942"
     ACCOUNT_SID = "ACe3e02549389e9b453f08b5136f64d4eb"
     AUTH_TOKEN = "e74b311d655c8d5a815c5f9be4a1d18b"
+
     CLIENT = Client(ACCOUNT_SID, AUTH_TOKEN)
     def make_conv(self,target):
 
